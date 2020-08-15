@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from learning_logs import views
- 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('users/', include(('users.urls', 'users'), namespace=None)),
     #Home page
     path('', include(('learning_logs.urls', 'learning_logs' ), namespace=None)),
 ]
 app_name = 'learning_logs'
+app_name = 'users'

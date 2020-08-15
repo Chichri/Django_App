@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     # My Apps
 
     'learning_logs',
+    'users',
+
+    #So that logout takes my page
+    'django.contrib.admin',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#My settings
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = '/users/login/'
